@@ -64,7 +64,7 @@ def serve_static_file(path):
 
 
 # Serve the index.html for the React App for all other routes.
-@app.route(_add_static_prefix("/"))
+# @app.route(_add_static_prefix("/"))
 def serve():
     if os.path.exists(os.path.join(STATIC_DIR, "index.html")):
         return send_from_directory(STATIC_DIR, "index.html")
